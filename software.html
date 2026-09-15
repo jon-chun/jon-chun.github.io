@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software | Jon A. Chun</title>
+<meta name="description" content="Open-source research software by Jon A. Chun, including SentimentArcs, MultiSentimentArcs, AIStorySimilarity and the LLM ethics audit framework, plus every public repository.">
+<meta name="author" content="Jon A. Chun">
+<link rel="canonical" href="https://jon-chun.github.io/software.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Software | Jon A. Chun">
+<meta property="og:description" content="Open-source research software including SentimentArcs, MultiSentimentArcs, AIStorySimilarity and the LLM ethics audit framework.">
+<meta property="og:url" content="https://jon-chun.github.io/software.html">
+<meta property="og:image" content="https://jon-chun.github.io/assets/img/fig_sentimentarcs_blocks.png">
+<meta property="og:site_name" content="Jon A. Chun">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Software | Jon A. Chun">
+<meta name="twitter:description" content="Open-source research software and every public repository.">
+<meta name="twitter:image" content="https://jon-chun.github.io/assets/img/fig_sentimentarcs_blocks.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,650&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">Jon A. Chun</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      Menu
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="software.html" aria-current="page">Software</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <h1>Software</h1>
+    <p class="lede">Research code, benchmarks and teaching material, all public on GitHub and
+      maintained since 2019. The methods below were developed to make humanistic questions
+      measurable without flattening the ambiguity that makes them interesting, and to build
+      evaluation into systems from the start rather than bolting it on at review time.</p>
+
+    <section aria-labelledby="h-featured">
+      <h2 id="h-featured">Featured projects</h2>
+      <ul class="cards cards--wide">
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/sentimentarcs_notebooks" rel="noopener">SentimentArcs</a></h3>
+          <p>A large ensemble of dozens of sentiment analysis models for analyzing emotion in
+            text over time. Model disagreement is treated as interpretive data, curves are
+            downsampled with LTTB to preserve peaks and valleys, and dynamic time warping
+            compares arcs across texts of unequal length. The technical basis for
+            <cite>The Shapes of Stories</cite> (Cambridge University Press, 2022).</p>
+          <p class="card__meta"><span class="tag">Jupyter Notebook</span> <span>43 stars</span> <span>10 forks</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/multisentimentarcs" rel="noopener">MultiSentimentArcs</a></h3>
+          <p>A novel method to visualize multimodal AI sentiment arcs in long-form narratives,
+            and the first fully open-source framework for diachronic multimodal sentiment
+            analysis. Measures emotional coherence across film dialogue and imagery.</p>
+          <p class="card__meta"><span class="tag">Python</span> <span>6 stars</span> <span>4 forks</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/AIStorySimiliarity" rel="noopener">AIStorySimilarity</a></h3>
+          <p>A benchmark for long-text story similarity grounded in narrative theory, with
+            applications to search, intellectual property infringement and guided creativity.
+            Published at ACL EMNLP/CoNLL 2024.</p>
+          <p class="card__meta"><span class="tag">Python</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/llm-sota-chatbots-ethics-based-audit" rel="noopener">LLM Ethics Audit</a></h3>
+          <p>A novel ethics-based audit of the state-of-the-art LLM chatbots, comparing the
+            ethical frameworks the leading models invoke and where those frameworks diverge
+            under pressure.</p>
+          <p class="card__meta"><span class="tag">Audit framework</span> <span>1 star</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/GenAI-Multi-Agent-Networks-and-Digital-Twins" rel="noopener">GenAI Multi-Agent Networks and Digital Twins</a></h3>
+          <p>Generative AI, multi-agent systems, AI research methodology, industry best
+            practices and the future of work. The full course repository for Kenyon College
+            IPHS 391, Fall 2025.</p>
+          <p class="card__meta"><span class="tag">Jupyter Notebook</span> <span>24 stars</span> <span>7 forks</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/iiot-time-series-prediction-system" rel="noopener">IIoT Time Series Prediction System</a></h3>
+          <p>An end-to-end industrial Internet of Things time series prediction system, built
+            for predictive maintenance and developed with an industry collaboration.</p>
+          <p class="card__meta"><span class="tag">Python</span> <span>4 stars</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/cei-tom-dataset-base" rel="noopener">CEI Benchmark</a></h3>
+          <p>The Contextual Emotional Inference benchmark: a pragmatic reasoning dataset of
+            300 human-validated scenarios with replication code. Data under CC BY 4.0, code
+            under MIT.</p>
+          <p class="card__meta"><span class="tag">Python</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/madcal-calibration" rel="noopener">AgenticSimLaw</a></h3>
+          <p>Multi-agent debate simulation of a US bench trial predicting juvenile recidivism,
+            with prosecutor, defense and judge roles over a seven-turn structured debate.
+            Accepted at the AAAI-26 LaMAS workshop.</p>
+          <p class="card__meta"><span class="tag">Python</span></p>
+        </li>
+        <li class="card">
+          <h3><a href="https://github.com/jon-chun/international-ai-regulation-survey" rel="noopener">International AI Regulation Survey</a></h3>
+          <p>Code and data comparing AI regulations in the EU, the US and China, supporting the
+            comparative global AI regulation work.</p>
+          <p class="card__meta"><span class="tag">Python</span></p>
+        </li>
+      </ul>
+
+      <figure>
+        <img src="assets/img/fig_sentimentarcs_blocks.png" width="1743" height="872"
+             alt="Block diagram of the SentimentArcs pipeline, showing the flow from text ingestion through the ensemble of sentiment models to smoothing, downsampling and trajectory comparison">
+        <figcaption>Block diagram for the
+          <a href="https://github.com/jon-chun/sentimentarcs_notebooks" rel="noopener">SentimentArcs notebooks</a>.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="h-recent" data-recent-section hidden>
+      <h2 id="h-recent">Recently updated</h2>
+      <p class="small muted">Fetched live from the GitHub API when this page loads.</p>
+      <div id="recent-repos"></div>
+    </section>
+
+    <section aria-labelledby="h-all">
+      <h2 id="h-all">All public repositories</h2>
+      <p class="lede">Every public, non-archived repository, grouped by theme. Scaffolding and
+        empty repositories are omitted. Regenerate this list with
+        <code>python3 scripts/build_repos.py</code>.</p>
+      <div class="repo-groups">
+<!-- BEGIN all-repos -->
+<!-- generated by scripts/build_repos.py: 173 repositories -->
+        <section class="repo-group" aria-labelledby="rg-sentimentarcs-narrative">
+          <h3 id="rg-sentimentarcs-narrative">SentimentArcs &amp; Narrative <span class="repo-count">63</span></h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_notebooks" rel="noopener">sentimentarcs_notebooks</a>
+              <span class="repo-desc">SentimentArcs: a large ensemble of dozens of sentiment analysis models to analyze emotion in text over time</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">43 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/GenAI-Multi-Agent-Networks-and-Digital-Twins" rel="noopener">GenAI-Multi-Agent-Networks-and-Digital-Twins</a>
+              <span class="repo-desc">Generative AI, Multi-Agent Systems (MAS), AI Research Methodology, Industry Best Practices, and The Future of Work (Kenyon College&#x27;s Integrated Program for Humane Studies Program Fall 2025)</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">24 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/multisentimentarcs" rel="noopener">multisentimentarcs</a>
+              <span class="repo-desc">A Novel Method to Visualize Multimodal AI Sentiment Arcs in Long-Form Narratives</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">6 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentiment-analysis-reference-corpus-novels" rel="noopener">sentiment-analysis-reference-corpus-novels</a>
+              <span class="repo-desc">Reference Corpus of Novels for Sentiment Analysis</span>
+              <span class="repo-meta"><span class="repo-stars">2 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/2020spr_creative" rel="noopener">2020spr_creative</a>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/2020spr_engl" rel="noopener">2020spr_engl</a>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/AI-LIT" rel="noopener">AI-LIT</a>
+              <span class="repo-desc">AI-LIT: Using AI Embeddings to find what is Lost in Translation</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/facial_emotion_recognition" rel="noopener">facial_emotion_recognition</a>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/llm-sota-chatbots-ethics-based-audit" rel="noopener">llm-sota-chatbots-ethics-based-audit</a>
+              <span class="repo-desc">A novel ethics-based audit (EBA) of the state-of-the-art LLM chatbots</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/nabokov_palefire" rel="noopener">nabokov_palefire</a>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs-website" rel="noopener">sentimentarcs-website</a>
+              <span class="repo-desc">A webified version of SentimentArcs (ported and expanded from original Jupyter Notebooks)</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_simplified" rel="noopener">sentimentarcs_simplified</a>
+              <span class="repo-desc">A simplified version of SentimentArcs Notebooks</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/AIStorySimiliarity" rel="noopener">AIStorySimiliarity</a>
+              <span class="repo-desc">AI Story Similarity</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/anna-karenina-sentiment-analysis" rel="noopener">anna-karenina-sentiment-analysis</a>
+              <span class="repo-desc">A lexicon-based sentiment and emotion analysis of Anna Karenina by Leo Tolstoy using the NRC lexicon.</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/arxiv-research-local" rel="noopener">arxiv-research-local</a>
+              <span class="repo-desc">Local LLM and VecDB to research ArXiv with Gradio UI</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/awesome-dataset-creation" rel="noopener">awesome-dataset-creation</a>
+              <span class="repo-desc">Curated list of resources for creating original datasets for original Data Science, Machine Learning and AI research and projects</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/CNAPipeline" rel="noopener">CNAPipeline</a>
+              <span class="repo-desc">This repository contains a number of experiments to inform the design of an NLP pipeline enabling Conflict Narrative Analysis</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/computational-digital-humanities-analytics" rel="noopener">computational-digital-humanities-analytics</a>
+              <span class="repo-desc">Analytics on Computational Digital Humanities from Kenyon College Human-Centered AI Research</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/conference-narrative2020-GPT2-NLG" rel="noopener">conference-narrative2020-GPT2-NLG</a>
+              <span class="repo-desc">Presentation on NLG using GPT-2 for Narrative2020 Conference in New Orleans</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/deepmusicviz" rel="noopener">deepmusicviz</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/genai-music-metrics" rel="noopener">genai-music-metrics</a>
+              <span class="repo-desc">A Qualitative Benchmark and Composite Metric on Generative AI Music</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/get-youtube-transcripts" rel="noopener">get-youtube-transcripts</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/get_youtube_transcripts" rel="noopener">get_youtube_transcripts</a>
+              <span class="repo-desc">Repo to get transcripts from YouTube channels</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/great_gatsby" rel="noopener">great_gatsby</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/haikus-for-codespaces" rel="noopener">haikus-for-codespaces</a>
+              <span class="repo-meta"><span class="repo-lang">EJS</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs391_fall2025_mp2_embedding-research-project" rel="noopener">iphs391_fall2025_mp2_embedding-research-project</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/katherineelkins-com-dev" rel="noopener">katherineelkins-com-dev</a>
+              <span class="repo-desc">Development repo for katherineelkins.com — AI safety researcher personal site</span>
+              <span class="repo-meta"><span class="repo-lang">HTML</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/mirror-specstory-docs" rel="noopener">mirror-specstory-docs</a>
+              <span class="repo-desc">Mirror of SpecStory Documentation on iterative/interactive chat-generated SDD</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/multilingual-sentimentarcs" rel="noopener">multilingual-sentimentarcs</a>
+              <span class="repo-desc">Multilingual Diachronic Sentiment Analysis using SentimentArcs</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/NLP-Project" rel="noopener">NLP-Project</a>
+              <span class="repo-desc">-- 1. NLP-Tutorial-Project: End-to-End NLP project to analyze what makes Ali Wong&#x27;s comedy routine stand out? - Alice Zhao --- nltk, genism, TextBlob, sklearn</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/novels_sentiment_analysis" rel="noopener">novels_sentiment_analysis</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/plays_chekhov" rel="noopener">plays_chekhov</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/proust_fr" rel="noopener">proust_fr</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/proust_new" rel="noopener">proust_new</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/proust_old" rel="noopener">proust_old</a>
+              <span class="repo-desc">C. K. Scott Moncrieff translation from Gutenberg</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scrape-edgar" rel="noopener">scrape-edgar</a>
+              <span class="repo-desc">Python scrape SEC EDGAR script</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scripts_comedy" rel="noopener">scripts_comedy</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scripts_sitc" rel="noopener">scripts_sitc</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentiment-analysis-reference-corpus-finance" rel="noopener">sentiment-analysis-reference-corpus-finance</a>
+              <span class="repo-desc">Reference Corpus of Financial Texts for Sentiment Analysis</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentiment-analysis-reference-corpus-social-media" rel="noopener">sentiment-analysis-reference-corpus-social-media</a>
+              <span class="repo-desc">Reference Corpus of Social Media Texts for Sentiment Analysis</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentiment-arcs" rel="noopener">sentiment-arcs</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/Sentiment-XAI-Greybox-Ensemble" rel="noopener">Sentiment-XAI-Greybox-Ensemble</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentiment_arcs" rel="noopener">sentiment_arcs</a>
+              <span class="repo-desc">Diachronic (time series) sentiment analysis of text by Jon Chun for Cambridge University Press Elements book by Katherine Elkins</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentiment_cruxes" rel="noopener">sentiment_cruxes</a>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs-film" rel="noopener">sentimentarcs-film</a>
+              <span class="repo-desc">Diachronic Sentiment Analysis of Film (including Movies and TV Shows)</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/SentimentArcs-Greybox" rel="noopener">SentimentArcs-Greybox</a>
+              <span class="repo-desc">Grey-box sentiment analysis ensemble using SOTA OpenAI gpt-3.5-turbo-0631 and gpt-4-0613 function in teacher-student-like XAI grey-box configuration with smaller, faster, cheaper sentiment models</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs-novels" rel="noopener">sentimentarcs-novels</a>
+              <span class="repo-desc">Diachronic Sentiment Analysis of Novels and Stories</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs-xai" rel="noopener">sentimentarcs-xai</a>
+              <span class="repo-desc">A novel greybox XAI methodology for diachronic sentiment analysis</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_2025" rel="noopener">sentimentarcs_2025</a>
+              <span class="repo-desc">IPHS Colab SentimentArcs version 2025</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_llms" rel="noopener">sentimentarcs_llms</a>
+              <span class="repo-desc">SentimentArcs with LLM models</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_original" rel="noopener">sentimentarcs_original</a>
+              <span class="repo-desc">Sentiment Analysis for Narrative Arcs</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_russian" rel="noopener">sentimentarcs_russian</a>
+              <span class="repo-desc">SentimenArcs Russian</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_social-media" rel="noopener">sentimentarcs_social-media</a>
+              <span class="repo-desc">Diachronic sentiment analysis of social media narratives using SentimentArcs</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimentarcs_transformers" rel="noopener">sentimentarcs_transformers</a>
+              <span class="repo-desc">SentimentArcs ensemble of Transformers</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/sentimenttime" rel="noopener">sentimenttime</a>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/staugustine_confessions" rel="noopener">staugustine_confessions</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/StoryArcs" rel="noopener">StoryArcs</a>
+              <span class="repo-desc">StoryArcs</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/the_helix_center_transcripts" rel="noopener">the_helix_center_transcripts</a>
+              <span class="repo-desc">The Helix Center Roundtable Transcripts</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/tube-sift" rel="noopener">tube-sift</a>
+              <span class="repo-desc">Research-scale YouTube content analysis — from collection to insight.</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/webport" rel="noopener">webport</a>
+              <span class="repo-desc">WebPort for porting simple websites (e.g. WordPress) by scraping content, data, metadata, data schemas, etc. It also analyzes UI/UX, data architecture, overall site design and control flow to generating comprehensive standard product and development documentation targeted for future AI-assisted custom website generation.</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/woolf_4books_sentiment" rel="noopener">woolf_4books_sentiment</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/youtube_transcribe_search" rel="noopener">youtube_transcribe_search</a>
+              <span class="repo-desc">Transcript YouTube Videos then use embeddings for search</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/YT-DJ-Playlist" rel="noopener">YT-DJ-Playlist</a>
+              <span class="repo-desc">YouTube DJ Playlist</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+          </ul>
+        </section>
+        <section class="repo-group" aria-labelledby="rg-ai-evaluation-safety-policy">
+          <h3 id="rg-ai-evaluation-safety-policy">AI Evaluation, Safety &amp; Policy <span class="repo-count">13</span></h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/jon-chun/llm-web-scraping" rel="noopener">llm-web-scraping</a>
+              <span class="repo-desc">Benchmarking LLM generated web scraping utilities</span>
+              <span class="repo-meta"><span class="repo-lang">HTML</span> <span class="repo-stars">2 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ai-regulation-eu-us-china" rel="noopener">ai-regulation-eu-us-china</a>
+              <span class="repo-desc">AI Regulation and Open Source in the EU, US, and China</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cei-tom-benchmark-anon" rel="noopener">cei-tom-benchmark-anon</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cei-tom-dataset" rel="noopener">cei-tom-dataset</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cei-tom-dataset-base" rel="noopener">cei-tom-dataset-base</a>
+              <span class="repo-desc">CEI Benchmark: pragmatic reasoning dataset and replication code (v1.0.2). Data CC BY 4.0, code MIT.</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cei-tom-dataset-public" rel="noopener">cei-tom-dataset-public</a>
+              <span class="repo-desc">Replication package for the NeurIPS 2026 paper: CEI — A Benchmark for Evaluating Pragmatic Reasoning in Language Models. 300 expert-authored scenarios, 5 pragmatic subtypes, Plutchik+VAD annotations, 7-LLM baselines.</span>
+              <span class="repo-meta"><span class="repo-lang">TeX</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/copyright-evals" rel="noopener">copyright-evals</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/international-ai-regulation-survey" rel="noopener">international-ai-regulation-survey</a>
+              <span class="repo-desc">Comparing AI Regulations in the EU, US, and China</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs391_mp3_graphrag_benchmarks" rel="noopener">iphs391_mp3_graphrag_benchmarks</a>
+              <span class="repo-desc">IPHS391 Benchmarking GraphRAG against RAG</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/madcal-calibration" rel="noopener">madcal-calibration</a>
+              <span class="repo-desc">AgenticSimLaw: Multi-Agent Debate Simulation of US Bench Trail Predicting Juvenile Recidisim</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/mla-generative-ai" rel="noopener">mla-generative-ai</a>
+              <span class="repo-desc">My ChatGPT and LLM Presentation for Ethics And Practice Of AIs In The Academy (Session 148 At MLA 2024) Chaired by Alan Liu</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/my-custom-jupyter-website" rel="noopener">my-custom-jupyter-website</a>
+              <span class="repo-desc">Tutorial demo</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/oss-security-audit" rel="noopener">oss-security-audit</a>
+              <span class="repo-desc">A partial or fully automated multi-stage pipeline to perform security audits on open-source software</span>
+            </li>
+          </ul>
+        </section>
+        <section class="repo-group" aria-labelledby="rg-agents-llm-tooling">
+          <h3 id="rg-agents-llm-tooling">Agents &amp; LLM Tooling <span class="repo-count">18</span></h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/jon-chun/langchain-experiments" rel="noopener">langchain-experiments</a>
+              <span class="repo-desc">Notebooks and code to test langchain</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">3 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/claude-code-agent-exercise" rel="noopener">claude-code-agent-exercise</a>
+              <span class="repo-desc">Claude Code Agent Exercise</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/frontiers-of-ai-automating-intelligence-with-multi-agent-frameworks" rel="noopener">frontiers-of-ai-automating-intelligence-with-multi-agent-frameworks</a>
+              <span class="repo-desc">Kenyon College Integrated Program for Humane Studies Fall 2024: Automated Knowledge Workflows with AI Agent Networks</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/llms-theory-and-practice-denison-university" rel="noopener">llms-theory-and-practice-denison-university</a>
+              <span class="repo-desc">Denison University CS and Math Department Talk on the Theory, Practice and Future Directions of Large Language Models</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/transformers-explained" rel="noopener">transformers-explained</a>
+              <span class="repo-desc">Explaining Transformers</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ancient-greek-nlp" rel="noopener">ancient-greek-nlp</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cite-guard" rel="noopener">cite-guard</a>
+              <span class="repo-desc">Claude Code Skills for Verifying Citations in Academic Papers</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/dev-setup" rel="noopener">dev-setup</a>
+              <span class="repo-desc">Configurations and Debugging of Claude Code</span>
+              <span class="repo-meta"><span class="repo-lang">Shell</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/fine-tune-creole-models" rel="noopener">fine-tune-creole-models</a>
+              <span class="repo-desc">Release-safe code for fine-tuning models for under-resourced Louisiana languages</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs-2024-transformers" rel="noopener">iphs-2024-transformers</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs391-GenAI-Agents" rel="noopener">iphs391-GenAI-Agents</a>
+              <span class="repo-desc">Kenyon College IPHS 391 Fall 2024 Generative AI and Autonomous Agents</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/kenyon-college-confidential-chatbot" rel="noopener">kenyon-college-confidential-chatbot</a>
+              <span class="repo-desc">A specialized chatbot for giving the inside skinny on all the resources at Kenyon College</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/nano-graphrag" rel="noopener">nano-graphrag</a>
+              <span class="repo-desc">Copied and customized from gusye1234/nano-graphrag</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ollama-multi-gpus" rel="noopener">ollama-multi-gpus</a>
+              <span class="repo-desc">Information and code on using Ollama to serve models across multiple GPUs</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ollama-structured-output" rel="noopener">ollama-structured-output</a>
+              <span class="repo-desc">Ollama Structured Outputs with Dec 2024 release</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/summarize-hnews" rel="noopener">summarize-hnews</a>
+              <span class="repo-desc">Summarize Hacker News by first extracting/summarizing (w/OpenAI) each thread and all resources before creating overall outline</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/synthetic-finetune-RAG" rel="noopener">synthetic-finetune-RAG</a>
+              <span class="repo-desc">IPHS300 Synthetic Data to Fine-Tune Embedding Models for More Performant RAG System</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/text2img-openvino-kenyon-logo" rel="noopener">text2img-openvino-kenyon-logo</a>
+              <span class="repo-desc">Stable diffusion with Intel OpenVINO to mock up new Kenyon Logo ideas</span>
+            </li>
+          </ul>
+        </section>
+        <section class="repo-group" aria-labelledby="rg-courses-teaching">
+          <h3 id="rg-courses-teaching">Courses &amp; Teaching <span class="repo-count">26</span></h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/jon-chun/2018-fall-kenyon-iphs391" rel="noopener">2018-fall-kenyon-iphs391</a>
+              <span class="repo-desc">Spring 2019 Kenyon College IPHS391: AI for the Humanities</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/2020spr_projects" rel="noopener">2020spr_projects</a>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cultural-analytics" rel="noopener">cultural-analytics</a>
+              <span class="repo-desc">Computational Cultural Analytics</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cultural-analytics-networks" rel="noopener">cultural-analytics-networks</a>
+              <span class="repo-desc">Kenyon IPHS Cultural Analytics - Network Analysis</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/cultural-analytics.github.io" rel="noopener">cultural-analytics.github.io</a>
+              <span class="repo-desc">Computational Cultural Analytics Course at Kenyon College</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/mla-promoting-ai-digital-humanities" rel="noopener">mla-promoting-ai-digital-humanities</a>
+              <span class="repo-desc">MLA 2024 Convention: Promoting AI Digital Humanities Projects</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/programminghumanity" rel="noopener">programminghumanity</a>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ai-for-humanity" rel="noopener">ai-for-humanity</a>
+              <span class="repo-desc">Main page for AI for Digital Humanities and DHColab https://www.kenyon.edu/digital-humanities/</span>
+              <span class="repo-meta"><span class="repo-lang">TeX</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ai-swe-best-practices" rel="noopener">ai-swe-best-practices</a>
+              <span class="repo-desc">Kenyon College Integrated Program for Humane Studies (IPHS) Fall 2026 Course IPHS 400 on AI Software Engineering and Software Development Lifecycle</span>
+              <span class="repo-meta"><span class="repo-lang">HTML</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/autotune-detection" rel="noopener">autotune-detection</a>
+              <span class="repo-desc">IPHS200 code support for code assistance</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/codespace-intro" rel="noopener">codespace-intro</a>
+              <span class="repo-meta"><span class="repo-lang">EJS</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/computational-cultural-analytics" rel="noopener">computational-cultural-analytics</a>
+              <span class="repo-desc">Computational Cultural Analytics</span>
+              <span class="repo-meta"><span class="repo-lang">HTML</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/datacamp-project-neurips" rel="noopener">datacamp-project-neurips</a>
+              <span class="repo-desc">Kenyon IPHS300 2023spr: Datacamp Hottest Topics in AI</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/digital_humanities_resources" rel="noopener">digital_humanities_resources</a>
+              <span class="repo-desc">Digital Humanities Resources</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/frontiersofai-org" rel="noopener">frontiersofai-org</a>
+              <span class="repo-desc">Kenyon College IPHS 400 Frontiers of AI</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/generative_ai_roundtable" rel="noopener">generative_ai_roundtable</a>
+              <span class="repo-desc">A Roundtable on Generative AI for Text and Art (Kenyon College, Jan 2023)</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs200fall2020" rel="noopener">iphs200fall2020</a>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs290_cultural_analytics_lda_topic_modeling" rel="noopener">iphs290_cultural_analytics_lda_topic_modeling</a>
+              <span class="repo-desc">This is my analysis of twitter xxx using LDA Topic Modeling</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs300_2021_datasets" rel="noopener">iphs300_2021_datasets</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/iphs300_2023spr" rel="noopener">iphs300_2023spr</a>
+              <span class="repo-desc">IPHS300 AI for the Humanites (Spring 2023) Kenyon College</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/Kenyon-College-IPHS300-AI-for-the-Humanities-2022-Spring" rel="noopener">Kenyon-College-IPHS300-AI-for-the-Humanities-2022-Spring</a>
+              <span class="repo-desc">Kenyon College Integrated Program for Humane Studies (IPHS300) AI for the Humanities 2022 Spring</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/mastering-functions-2022" rel="noopener">mastering-functions-2022</a>
+              <span class="repo-desc">This is a repo for mastering Python functions</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/programming-humanity" rel="noopener">programming-humanity</a>
+              <span class="repo-desc">Social Sciences/Humanities-first Python and Computer Science Course</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/rtd-tutorial" rel="noopener">rtd-tutorial</a>
+              <span class="repo-desc">ReadTheDocs Tutorial</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/skills-introduction-to-github" rel="noopener">skills-introduction-to-github</a>
+              <span class="repo-desc">My clone repository</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/theailab-net" rel="noopener">theailab-net</a>
+              <span class="repo-desc">Kenyon College, Integrated Program in Humane Studies (IPHS) Human-Centered AI curriculum materials</span>
+              <span class="repo-meta"><span class="repo-lang">HTML</span></span>
+            </li>
+          </ul>
+        </section>
+        <section class="repo-group" aria-labelledby="rg-data-collection-scraping">
+          <h3 id="rg-data-collection-scraping">Data Collection &amp; Scraping <span class="repo-count">14</span></h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/jon-chun/ai-socratic-tutor" rel="noopener">ai-socratic-tutor</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/DocuMindIntelliOCR" rel="noopener">DocuMindIntelliOCR</a>
+              <span class="repo-meta"><span class="repo-lang">HTML</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/human-in-the-loop-data-labeler" rel="noopener">human-in-the-loop-data-labeler</a>
+              <span class="repo-desc">Software for humans to quickly configure and label generic datasets</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/nafems-anomalous-time-series-augmentation" rel="noopener">nafems-anomalous-time-series-augmentation</a>
+              <span class="repo-desc">Notes and references for NAFEMS talk on augmenting anomalous time series datasets</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scrape-social-medias" rel="noopener">scrape-social-medias</a>
+              <span class="repo-desc">Scrape social media sites with Python</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/crawl_websites" rel="noopener">crawl_websites</a>
+              <span class="repo-desc">General website crawlers</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/extracting-sec.gov-filings" rel="noopener">extracting-sec.gov-filings</a>
+              <span class="repo-desc">Fork of extracting-sec.gov-filings to scrape SEC EDGAR with Python</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ocr-ensemble" rel="noopener">ocr-ensemble</a>
+              <span class="repo-desc">Minimal public scaffold for probabilistic reconstruction of degraded print</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scrape-twitter-api-v2-sqlite" rel="noopener">scrape-twitter-api-v2-sqlite</a>
+              <span class="repo-desc">Scrape Twitter API ver2 to SQLite Database</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scrape-webpage-data" rel="noopener">scrape-webpage-data</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scrape_website_with_ai" rel="noopener">scrape_website_with_ai</a>
+              <span class="repo-desc">Use AI to scrape Helix Center Website</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/scraper-crawlee" rel="noopener">scraper-crawlee</a>
+              <span class="repo-desc">APIfy Crawlee scraper for websites</span>
+              <span class="repo-meta"><span class="repo-lang">JavaScript</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/youtube_downloader" rel="noopener">youtube_downloader</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/yt-content-analyzer" rel="noopener">yt-content-analyzer</a>
+              <span class="repo-desc">YouTube Content Analyzer</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+          </ul>
+        </section>
+        <section class="repo-group" aria-labelledby="rg-dev-tooling-misc">
+          <h3 id="rg-dev-tooling-misc">Dev Tooling &amp; Misc <span class="repo-count">39</span></h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/jon-chun/iiot-time-series-prediction-system" rel="noopener">iiot-time-series-prediction-system</a>
+              <span class="repo-desc">An End-to-End Industrial IoT Time Series Prediction System</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">4 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/network-notebooks" rel="noopener">network-notebooks</a>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span> <span class="repo-stars">2 stars</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ai-conferences-and-events" rel="noopener">ai-conferences-and-events</a>
+              <span class="repo-desc">AI conferences and events</span>
+              <span class="repo-meta"><span class="repo-lang">JavaScript</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/awesome-local-ai" rel="noopener">awesome-local-ai</a>
+              <span class="repo-desc">Collection of resources for running AI locally, decentralized, and on the edge from laptops to IoT devices</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/nextjs-better-auth-postgresql-starter-kit" rel="noopener">nextjs-better-auth-postgresql-starter-kit</a>
+              <span class="repo-meta"><span class="repo-lang">TypeScript</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/openface-analysis" rel="noopener">openface-analysis</a>
+              <span class="repo-desc">The respository for Julianna&#x27;s facial expression/cortisol project</span>
+              <span class="repo-meta"><span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/poml-examples" rel="noopener">poml-examples</a>
+              <span class="repo-desc">Examples extracted from Microsoft POML repo</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/unix-utils" rel="noopener">unix-utils</a>
+              <span class="repo-desc">Misc UNIX utilties</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/utility-html-to-markdown" rel="noopener">utility-html-to-markdown</a>
+              <span class="repo-desc">Customized repo to utilize https://github.com/Goldziher/html-to-markdown</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/utility_docling" rel="noopener">utility_docling</a>
+              <span class="repo-desc">Utility to convert docs between different formats using IBM&#x27;s FOSS Docling</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/utility_yt-dlt_2025" rel="noopener">utility_yt-dlt_2025</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span> <span class="repo-stars">1 star</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/agi-is-awesome" rel="noopener">agi-is-awesome</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ai-mlops" rel="noopener">ai-mlops</a>
+              <span class="repo-desc">MLOps in general and for AI in particular</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/ai-setup-macos" rel="noopener">ai-setup-macos</a>
+              <span class="repo-desc">Setup MacOS for AI development (Terminal, Shell, etc)</span>
+              <span class="repo-meta"><span class="repo-lang">Shell</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/awesome_generative_ai_image" rel="noopener">awesome_generative_ai_image</a>
+              <span class="repo-desc">Resources for Generative AI for Images and Art</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/container-mlops-template.-" rel="noopener">container-mlops-template.-</a>
+              <span class="repo-desc">alfredodeza/container-mlops-template.</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/dev-hyperpersuasion-tom" rel="noopener">dev-hyperpersuasion-tom</a>
+              <span class="repo-desc">DEVELOPMENT REPO for Hyperpersuasion ToM</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/doc-diff" rel="noopener">doc-diff</a>
+              <span class="repo-desc">Compare two documents, identify and enumerate the differences (edits)</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/doc-shape-shifter" rel="noopener">doc-shape-shifter</a>
+              <span class="repo-desc">Universal document transformation between formats where plausible</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/generative_art" rel="noopener">generative_art</a>
+              <span class="repo-desc">Notebooks tested, debugged and/or enhanced for generative art</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/git-repo" rel="noopener">git-repo</a>
+              <span class="repo-desc">Demo</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/hbo_silicon_valley_gilfoyle_bitcoin_drop_bot" rel="noopener">hbo_silicon_valley_gilfoyle_bitcoin_drop_bot</a>
+              <span class="repo-desc">HBO Silicon Valley: Bertram Gilfoyle&#x27;s Bitcoin Price Drop Alert Bot</span>
+              <span class="repo-meta"><span class="repo-lang">Jupyter Notebook</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/lexvarsdatr" rel="noopener">lexvarsdatr</a>
+              <span class="repo-desc">A collection of behavioral data sets &amp; some functions for extracting semantic associations and network structures from term-feature matrices.</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/linux-sysadmin-utilities" rel="noopener">linux-sysadmin-utilities</a>
+              <span class="repo-desc">Linux/Ubuntu programs to automate system admin tasks</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/MyArXiv" rel="noopener">MyArXiv</a>
+              <span class="repo-meta"><span class="repo-lang">CSS</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/n8n-io-nodes-starter" rel="noopener">n8n-io-nodes-starter</a>
+              <span class="repo-meta"><span class="repo-lang">TypeScript</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/pong-oop" rel="noopener">pong-oop</a>
+              <span class="repo-desc">Pong in Object-Oriented Paradigm (Python)</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/pong-procedural" rel="noopener">pong-procedural</a>
+              <span class="repo-desc">Pong game in Procedural Paradigm (Python)</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/prune-code" rel="noopener">prune-code</a>
+              <span class="repo-desc">Prune code and github repo trees for efficient distillation and summarization for more effective AI context engineering</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/prune-github-repo-for-ai-context-engineering" rel="noopener">prune-github-repo-for-ai-context-engineering</a>
+              <span class="repo-desc">Selectively prune a local existing Github repo for efficient context engineering tailored to AI-assisted coding</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/reactive-resume-auto-composer" rel="noopener">reactive-resume-auto-composer</a>
+              <span class="repo-desc">Reactive Resume Auto Composer: Create customized resumes, cover letters and emails tailored to your experiences and a particular job</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/references-theoretical-cs" rel="noopener">references-theoretical-cs</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/resources-geospatial-analysis" rel="noopener">resources-geospatial-analysis</a>
+              <span class="repo-desc">A taxonomy of Geospatial Analysis resources for Computational Cultural Analytics</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/reverse-engineer-simple-website" rel="noopener">reverse-engineer-simple-website</a>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/skills-toolbox" rel="noopener">skills-toolbox</a>
+              <span class="repo-desc">Toolbox of AI Coding Skills</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/storm" rel="noopener">storm</a>
+              <span class="repo-desc">Customized local-running copy of Stanford Storm Project</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/Time_Series_Analysis_I" rel="noopener">Time_Series_Analysis_I</a>
+              <span class="repo-desc">TSA is a collection of data points collected at constant time intervals. These are analyzed to determine the long term trend so as to forecast the future or perform some other form of analysis</span>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/tm_mid_docs" rel="noopener">tm_mid_docs</a>
+            </li>
+            <li>
+              <a href="https://github.com/jon-chun/validate_github_limits" rel="noopener">validate_github_limits</a>
+              <span class="repo-desc">Validate the local repo falls within Github limits before attempting to add/commit/push to Github.com remote repo</span>
+              <span class="repo-meta"><span class="repo-lang">Python</span></span>
+            </li>
+          </ul>
+        </section>
+<!-- END all-repos -->
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h2>Profiles and projects</h2>
+    <ul>
+      <li><a href="https://scholar.google.com/citations?user=l-iUHQMAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://github.com/jon-chun" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/jonchun2000/" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://orcid.org/0000-0002-5315-6784" rel="noopener">ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Jon-Chun" rel="noopener">ResearchGate</a></li>
+      <li><a href="https://www.kenyon.edu/directory/jon-chun/" rel="noopener">Kenyon directory</a></li>
+      <li><a href="https://humancenteredailab.org" rel="noopener">Human-Centered AI Lab</a></li>
+      <li><a href="https://archivalintelligenceai.org" rel="noopener">Archival Intelligence</a></li>
+      <li><a href="https://humanestudies.org" rel="noopener">Humane Studies</a></li>
+    </ul>
+    <div class="site-footer__meta">
+      <p>Jon A. Chun &middot; Kenyon College AI CoLab</p>
+      <p>Last updated September 2026</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

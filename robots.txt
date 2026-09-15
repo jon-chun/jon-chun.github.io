@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jon-chun.github.io/sitemap.xml

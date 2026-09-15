@@ -1,0 +1,968 @@
+/* ==========================================================================
+   Jon A. Chun - personal academic homepage
+   Single shared stylesheet. No build step, no framework.
+   ========================================================================== */
+
+/* --- Design tokens -------------------------------------------------------- */
+
+:root {
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+
+  /* Palette - light */
+  --bg: #fbfaf8;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f3f1ed;
+  --text: #1c1b19;
+  --text-muted: #5c5851;
+  --text-faint: #837e75;
+  --border: #e0dcd5;
+  --border-strong: #c8c2b8;
+  --accent: #7a2e2e;
+  --accent-hover: #5d2020;
+  --accent-soft: #f5ebe9;
+  --link: #1e4f6b;
+  --link-hover: #123448;
+  --focus: #1e6f9b;
+
+  /* Scale */
+  --measure: 68ch;
+  --wrap: 72rem;
+  --radius: 6px;
+  --gutter: 1rem;
+  --shadow-sm: 0 1px 2px rgba(28, 27, 25, 0.06);
+  --shadow-md: 0 2px 10px rgba(28, 27, 25, 0.07);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14151a;
+    --bg-elevated: #1c1e25;
+    --bg-subtle: #22242c;
+    --text: #e8e6e1;
+    --text-muted: #a8a49c;
+    --text-faint: #837e75;
+    --border: #2e3139;
+    --border-strong: #3f434d;
+    --accent: #e0a3a3;
+    --accent-hover: #f0bcbc;
+    --accent-soft: #2a2023;
+    --link: #8ec5e3;
+    --link-hover: #b3dcf2;
+    --focus: #6ab5e0;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 2px 12px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* --- Reset ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Layout --------------------------------------------------------------- */
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+main {
+  display: block;
+  padding-block: 2.5rem 4rem;
+}
+
+section {
+  margin-block-end: 3.5rem;
+}
+
+section:last-child {
+  margin-block-end: 0;
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+/* --- Skip link ------------------------------------------------------------ */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius) 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* --- Typography ----------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.012em;
+  margin-block: 0 0.6em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 1.3rem + 2.6vw, 2.9rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.85rem);
+  padding-block-end: 0.35rem;
+  border-block-end: 1px solid var(--border);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+}
+
+h4 {
+  font-size: 1.02rem;
+  font-family: var(--font-sans);
+  font-weight: 650;
+}
+
+p {
+  margin-block: 0 1.1em;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+small,
+.small {
+  font-size: 0.875rem;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.faint {
+  color: var(--text-faint);
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: var(--measure);
+}
+
+code,
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--bg-subtle);
+  padding: 0.12em 0.36em;
+  border-radius: 3px;
+}
+
+blockquote {
+  margin: 0 0 1.1em;
+  padding-inline-start: 1rem;
+  border-inline-start: 3px solid var(--border-strong);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+hr {
+  border: 0;
+  border-block-start: 1px solid var(--border);
+  margin-block: 2.5rem;
+}
+
+/* --- Site header / nav ---------------------------------------------------- */
+
+.site-header {
+  background: var(--bg-elevated);
+  border-block-end: 1px solid var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.75rem;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.06rem;
+  font-weight: 650;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brand:hover {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+}
+
+.nav-toggle__bars {
+  display: inline-block;
+  width: 1rem;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+}
+
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-toggle__bars::before {
+  top: -5px;
+}
+
+.nav-toggle__bars::after {
+  top: 5px;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.945rem;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  background: var(--bg-subtle);
+  color: var(--text);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 650;
+  background: var(--accent-soft);
+}
+
+@media (min-width: 48rem) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+  .site-nav {
+    display: none;
+    width: 100%;
+  }
+  .site-header__inner {
+    flex-wrap: wrap;
+    padding-block: 0.6rem;
+  }
+  .site-nav.is-open {
+    display: block;
+  }
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding-block: 0.4rem 0.2rem;
+  }
+  .site-nav a {
+    padding-block: 0.6rem;
+  }
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+
+.hero {
+  padding-block: 3rem 1rem;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero__avatar {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.hero__kicker {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-block: 0 0.5rem;
+}
+
+.hero h1 {
+  margin-block-end: 0.35rem;
+}
+
+.hero__role {
+  font-size: 1.14rem;
+  color: var(--text-muted);
+  margin-block-end: 1.1rem;
+}
+
+@media (max-width: 40rem) {
+  .hero {
+    padding-block: 2rem 0.5rem;
+  }
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .hero__avatar {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+
+/* --- Link rows ------------------------------------------------------------ */
+
+.linkrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.linkrow a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.linkrow a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* --- Highlight strip ------------------------------------------------------ */
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(13rem, 100%), 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.highlights li {
+  background: var(--bg-elevated);
+  padding: 1.1rem 1.15rem;
+}
+
+.highlights b {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 650;
+  line-height: 1.1;
+  color: var(--accent);
+  margin-block-end: 0.3rem;
+}
+
+.highlights span {
+  display: block;
+  font-size: 0.895rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* --- Cards ---------------------------------------------------------------- */
+
+/* min() keeps the track floor from exceeding the container on narrow phones,
+   where a fixed minmax() floor plus padding would force a page-wide scroll. */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+  gap: 1.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards--wide {
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.card h3 {
+  margin-block-end: 0;
+}
+
+.card h3 a {
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  text-decoration: underline;
+}
+
+.card p {
+  margin-block-end: 0;
+  font-size: 0.945rem;
+  color: var(--text-muted);
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  margin-block-start: auto;
+  padding-block-start: 0.5rem;
+  font-size: 0.83rem;
+  color: var(--text-faint);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* --- Focus areas ---------------------------------------------------------- */
+
+.focus-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.focus-areas h3 {
+  padding-block-end: 0.4rem;
+  border-block-end: 2px solid var(--accent);
+  margin-block-end: 0.6rem;
+}
+
+.focus-areas p {
+  margin-block-end: 0;
+  color: var(--text-muted);
+  font-size: 0.96rem;
+}
+
+/* --- Entry lists (publications, roles, press) ----------------------------- */
+
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entries > li {
+  padding-block: 1.1rem;
+  border-block-end: 1px solid var(--border);
+  max-width: var(--measure);
+}
+
+.entries > li:first-child {
+  padding-block-start: 0.3rem;
+}
+
+.entries > li:last-child {
+  border-block-end: 0;
+}
+
+.entry__title {
+  font-family: var(--font-serif);
+  font-size: 1.07rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-block: 0 0.3rem;
+}
+
+.entry__venue {
+  display: block;
+  font-size: 0.885rem;
+  color: var(--text-faint);
+  margin-block-end: 0.45rem;
+}
+
+.entry__abstract {
+  margin-block-end: 0;
+  font-size: 0.945rem;
+  color: var(--text-muted);
+}
+
+/* Compact bullet list */
+.tight {
+  max-width: var(--measure);
+  padding-inline-start: 1.2rem;
+}
+
+.tight li {
+  margin-block-end: 0.5rem;
+}
+
+/* --- Timeline ------------------------------------------------------------- */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--measure);
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem;
+  padding-block: 0.7rem;
+  border-block-end: 1px solid var(--border);
+}
+
+.timeline li:last-child {
+  border-block-end: 0;
+}
+
+.timeline time,
+.timeline .when {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.timeline p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 34rem) {
+  .timeline li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
+
+/* --- Tables --------------------------------------------------------------- */
+
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+caption {
+  text-align: left;
+  font-size: 0.885rem;
+  color: var(--text-faint);
+  padding-block-end: 0.6rem;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.7rem;
+  border-block-end: 1px solid var(--border);
+}
+
+thead th {
+  font-size: 0.815rem;
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border-block-end: 1px solid var(--border-strong);
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-block-end: 0;
+}
+
+/* Phones: reflow each row into a stacked block using data-label. */
+@media (max-width: 40rem) {
+  table.stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  table.stack tbody tr {
+    display: block;
+    padding-block: 0.75rem;
+    border-block-end: 1px solid var(--border);
+  }
+  table.stack tbody tr:last-child {
+    border-block-end: 0;
+  }
+  table.stack tbody th,
+  table.stack tbody td {
+    display: block;
+    padding: 0.1rem 0;
+    border: 0;
+  }
+  table.stack tbody td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-weight: 650;
+    color: var(--text-faint);
+  }
+  table.stack tbody th {
+    font-size: 1rem;
+    font-weight: 650;
+    padding-block-end: 0.25rem;
+  }
+}
+
+/* --- Figures -------------------------------------------------------------- */
+
+figure {
+  margin: 1.75rem 0;
+}
+
+figure img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+}
+
+figcaption {
+  margin-block-start: 0.6rem;
+  font-size: 0.865rem;
+  color: var(--text-faint);
+  max-width: var(--measure);
+}
+
+.figure-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.figure-pair figure {
+  margin: 0;
+}
+
+.logo-inline {
+  max-width: 13rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  background: var(--bg-elevated);
+}
+
+/* --- Repository listing --------------------------------------------------- */
+
+.repo-groups {
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* Grid items default to min-width:auto, so a single long repository name
+   sets a min-content floor that pushes the track wider than the container
+   and scrolls the whole page on a phone. Let the track shrink instead. */
+.repo-group {
+  min-width: 0;
+}
+
+.repo-group h3 {
+  padding-block-end: 0.35rem;
+  border-block-end: 1px solid var(--border-strong);
+}
+
+.repo-count {
+  display: inline-block;
+  margin-inline-start: 0.4rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: var(--bg-subtle);
+  color: var(--text-faint);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  vertical-align: 0.15em;
+}
+
+.repo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.repo-list li {
+  break-inside: avoid;
+  padding-block: 0.5rem;
+  margin-block-end: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.repo-list > li > a {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  /* Repository names are long, hyphen-joined and unbreakable by default. */
+  overflow-wrap: anywhere;
+}
+
+.repo-desc {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  margin-block-start: 0.1rem;
+}
+
+.repo-meta {
+  display: block;
+  margin-block-start: 0.2rem;
+  font-size: 0.79rem;
+  color: var(--text-faint);
+}
+
+.repo-lang + .repo-stars::before {
+  content: "\00b7";
+  margin-inline: 0.35rem;
+}
+
+@media (max-width: 52rem) {
+  .repo-list {
+    columns: 1;
+  }
+}
+
+/* --- Callout -------------------------------------------------------------- */
+
+.callout {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  max-width: var(--measure);
+}
+
+.callout > :last-child {
+  margin-block-end: 0;
+}
+
+.callout h3 {
+  margin-block-end: 0.4rem;
+}
+
+/* --- Footer --------------------------------------------------------------- */
+
+.site-footer {
+  border-block-start: 1px solid var(--border);
+  background: var(--bg-elevated);
+  padding-block: 2.25rem;
+  margin-block-start: 3rem;
+}
+
+.site-footer h2 {
+  font-size: 0.815rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  border: 0;
+  padding: 0;
+  margin-block-end: 0.75rem;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  font-size: 0.92rem;
+}
+
+.site-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.865rem;
+  color: var(--text-faint);
+  border-block-start: 1px solid var(--border);
+  padding-block-start: 1.25rem;
+  margin: 0;
+}
+
+.site-footer__meta p {
+  margin: 0;
+}
+
+/* --- Utilities ------------------------------------------------------------ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Error page */
+.errorpage {
+  padding-block: 5rem 4rem;
+  text-align: center;
+}
+
+.errorpage h1 {
+  margin-block-end: 0.5rem;
+}
+
+.errorpage .linkrow {
+  justify-content: center;
+}
